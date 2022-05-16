@@ -19,7 +19,7 @@ function HomePage() {
               console.log(error, "Could not load data");
             }
           })();
-        }, []);
+        },[dispatch]);
     
     return (
         <div>

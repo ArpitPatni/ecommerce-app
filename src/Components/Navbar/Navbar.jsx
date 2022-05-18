@@ -2,9 +2,11 @@ import React from 'react'
 
 import { Link } from "react-router-dom"
 import { useFilter } from '../../Context/FilterContext';
+import { useProduct } from '../../Context/ProductContext';
 function Navbar() {
 
   const { FilterDispatch } = useFilter();
+  const { productState: {cart, wishList } } = useProduct();
   
   return (
     <div>
@@ -24,13 +26,13 @@ function Navbar() {
           <Link to='/myCart'>
             <button class="badge-button badge-lg">
               <i class="fas fa-shopping-cart fa-2x"></i>
-              <span class="icon-button-badge flex center icon-xl">0</span>
+              <span class="icon-button-badge flex center icon-xl">{cart.length}</span>
             </button>
           </Link>
           <Link to="/myWishlist">
             <button class="badge-button badge-lg" >
               <i class="fas fa-heart fa-2x"></i>
-              <span class="icon-button-badge flex center icon-xl">0</span>
+              <span class="icon-button-badge flex center icon-xl">{wishList.length}</span>
             </button>
           </Link>
         </div>

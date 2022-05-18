@@ -7,6 +7,7 @@ import { useProduct } from '../../Context/ProductContext';
 import { useFilter } from '../../Context/FilterContext';
 import { Link } from 'react-router-dom';
 const Products = () => {
+
     const {
         FilterState: { byCategory, sortBy, byRating, byPrice },
 
@@ -51,7 +52,7 @@ const Products = () => {
             }
         })()
     }, [productsDispatch])
-    // console.log(products)
+    
     return (
         <div>
             <Navbar />
@@ -85,7 +86,7 @@ const Products = () => {
 
                                                     {cart.some((item) => item.id === prod.id) ? (<Link to='/myCart'><button className='ecom-btn'>Go To Cart</button></Link>) : (<button className='ecom-btn' onClick={() => productsDispatch({ type: "ADD_TO_CART", payload: prod })}>Add to Cart</button>)}
 
-                                                    {wishList.some((item) => item.id === prod.id) ? (<button className='ecom-btn'>Go to Wishlist </button>) : (<button className='ecom-btn' onClick={() => productsDispatch({ type: "ADD_TO_WISHLIST", payload: prod })}>Add to Wishlist</button>)}
+                                                    {wishList.some((item) => item.id === prod.id) ? (<Link to='/myWishlist'><button className='ecom-btn'>Go to Wishlist </button></Link>) : (<button className='ecom-btn' onClick={() => productsDispatch({ type: "ADD_TO_WISHLIST", payload: prod })}>Add to Wishlist</button>)}
 
                                                 </div>
                                             </div>

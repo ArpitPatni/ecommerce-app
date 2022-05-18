@@ -1,3 +1,8 @@
+:root {
+  --nav-color:#2874f0;
+  --white-color:white;
+}
+
 .main {
     display: flex;
     flex-direction: column;
@@ -73,11 +78,11 @@
   }
 
   .ecom-btn{
-      background-color: #2874f0;
+      background-color:var(--nav-color);
       border-radius: 2px;
       border: none;
       padding: 5px;
-      color: white;
+      color: var(--white-color);
   }
 
   /* styling the right part */

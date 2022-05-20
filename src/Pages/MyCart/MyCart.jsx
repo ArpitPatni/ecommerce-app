@@ -66,8 +66,8 @@ function MyCart() {
                                                 })
                                             }
                                         >
-                                            {[...Array(prod.inStock).keys()].map((x) => (
-                                                <option key={x + 1}>{x + 1}</option>
+                                            {[...Array(prod.inStock).keys()].map((quantity) => (
+                                                <option key={quantity + 1}>{quantity + 1}</option>
                                             ))}
                                         </select>
 

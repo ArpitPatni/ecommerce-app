@@ -1,13 +1,12 @@
 import React from 'react'
-
 import { Link } from "react-router-dom"
-import { useFilter } from '../../Context/FilterContext';
 import { useProduct } from '../../Context/ProductContext';
+import { useFilter } from '../../Context/FilterContext';
+import { useAuth } from '../../Context/AuthContext';
 function Navbar() {
-
+  const { productState: { cart, wishList } } = useProduct();
   const { FilterDispatch } = useFilter();
-  const { productState: {cart, wishList } } = useProduct();
-  
+  const { isLogin, setIsLogin } = useAuth();
   return (
     <div>
       <nav class="flex nav-item background-color">
@@ -17,7 +16,18 @@ function Navbar() {
         </div>
         <div class="right-nav flex">
 
-        <Link to="/login"><button className="btn btn-round">Login</button></Link>
+          <Link to="/login">
+            {isLogin ? (
+              <button
+                className="btn btn-round"
+                onClick={() => setIsLogin((isLogin) => !isLogin)}
+              >
+                Logout
+              </button>
+            ) : (
+              <button className="btn btn-round">Login</button>
+            )}
+          </Link>
 
           <Link to="/SignUp"><button class="btn btn-round" >Signup</button></Link>
           <Link to="/products"><button onClick={() => {
@@ -30,7 +40,7 @@ function Navbar() {
             </button>
           </Link>
           <Link to="/myWishlist">
-            <button class="badge-button badge-lg" >
+            <button class="badge-button badge-lg" onclick="window.location.href='mywishlist.html';">
               <i class="fas fa-heart fa-2x"></i>
               <span class="icon-button-badge flex center icon-xl">{wishList.length}</span>
             </button>

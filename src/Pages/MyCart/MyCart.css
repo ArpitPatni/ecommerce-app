@@ -3,8 +3,8 @@
 :root {
   --body-background-color: rgba(128, 128, 128, 0.322);
   --background-color: #2874f0;
-  --white-color: white;
-  --black-color: black;
+  --white-color: #FFFFFF;
+  --black-color: #000000;
   --light-gray: lightgray;
   --gray-color: gray;
 }

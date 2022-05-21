@@ -1,0 +1,77 @@
+.login-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    background-color: var(--white-color);
+    transform: translate(-50%, -50%);
+    width: 410px;
+    height: 450px;
+    padding: 30px;
+    box-shadow: 1px 1px 10px var(--black-color);
+    font-weight: 800;
+  }
+  
+  .login-container .login-heading {
+    font-size: 35px;
+  }
+  
+  .login-container form .data {
+    height: 45px;
+    width: 100%;
+    margin: 40px 0;
+  }
+  form .data input {
+    height: 100%;
+    width: 100%;
+  }
+  
+  form .btn button {
+    /* margin-top: 15px; */
+    padding: 10px;
+    width: 100%;
+    background-color: #2874f0;
+    color: var(--white-color);
+    border: none;
+  }
+  
+  button:hover {
+    cursor: pointer;
+  }
+  .remember-me {
+    margin-right: 70px;
+    justify-content: space-between;
+    width: 100%;
+  }
+  a {
+    color:#2874f0;
+    text-decoration: none;
+  }
+  
+  .create-new-account {
+    text-align: center;
+    padding: 20px;
+  }
+  
+  .create-new-account a {
+    color: var(--black-color);
+  }
+  input {
+    border: 1px solid lightgray;
+    margin-top: 5px;
+  }
+  .label-class {
+    float: left;
+    color: black;
+  }
+  .btn {
+    background-color: var(--white-color);
+    text-align: center;
+    text-decoration: none;
+  }
+  .login-btn{
+    width: 100%;
+    background-color: #2874f0;
+    padding: 10px;
+    margin-top: 20px;
+    color: white;
+  }

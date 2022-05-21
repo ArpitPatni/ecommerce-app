@@ -21,8 +21,7 @@ function Navbar() {
               <button
                 className="btn btn-round"
                 onClick={() => setIsLogin((isLogin) => !isLogin)}
-              >
-                Logout
+              > Logout
               </button>
             ) : (
               <button className="btn btn-round">Login</button>
